@@ -1,0 +1,44 @@
+#This set of variables is for LFS (8.2)
+
+echo -e "
+############################################################\n\
+#  General variables---------------------------------------#\n\
+############################################################\n"
+
+LFS=/mnt/lfs
+export LFS
+
+#=================Variables para los meta instaladores==================
+srcdir=$(pwd)
+srcinst1="$srcdir/1-inst-temp-sys"
+srcinst2="$srcdir/2-inst-chroot"
+srcinst3="$srcdir/3-inst-basic-sys-sw"
+dirversiones="$srcdir/versiones"
+qipkgs32="$srcdir/paquetes32"
+chrootqipkgs="$LFS/qipkgs"
+croothome="$LFS/home"
+export srcdir srcinst1 srcinst2 srcinst3 dirversiones qipkgs32 \
+	   chrootqipkgs croothome 
+
+lfsdevice="/dev/sda1"
+export lfsdevice
+
+#=================Variables para los instaladores=======================
+#--Variables para mensajes
+MSG_CONF="Configure"
+MSG_MAKE="Make"
+MSG_CHK="Check"
+MSG_INST="Make_install"
+MSG_ERR="Se ha producido un error"
+MSG_TIME="Tiempo de instalación"
+export MSG_CONF MSG_MAKE MSG_CHK MSG_INST MSG_ERR MSG_TIME
+
+#--Variables para los registros--------------------
+DIR_FUENTES="$LFS/sources"
+FILE_BITACORA="$srcdir/registros/reg_instal.log"
+FILE_CHECKS="$srcdir/registros/test.log"
+export DIR_FUENTES FILE_BITACORA FILE_CHECKS
+
+#--Variables de compilación
+MAKEFLAGS='-j 1'
+export MAKEFLAGS

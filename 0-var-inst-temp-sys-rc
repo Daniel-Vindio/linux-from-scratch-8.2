@@ -1,0 +1,19 @@
+#This set of variables is for LFS (8.2)
+
+echo -e "
+############################################################\n\
+#  Variables for temp. sys.--------------------------------#\n\
+############################################################\n"
+
+set +h
+umask 022
+LC_ALL=POSIX
+PATH=/tools/bin:/bin:/usr/bin
+export LC_ALL PATH
+
+#------Variables de compilación--------------------
+LFS_TGT=$(uname -m)-lfs-linux-gnu
+export LFS_TGT
+
+MAKEFLAGS='-j 1'
+export MAKEFLAGS
