@@ -1,5 +1,10 @@
 #/bin/bash
 
+echo -e "
+############################################################\n\
+#$0\n\
+############################################################\n"
+
 #Chapter 8. If You Are Going to Chroot 
 
 #Este pequeño script es para recordar y automatizar el arranque del
@@ -32,9 +37,9 @@ cd ${srcinst2}
 
 #Se monta el file system
 #Mounting file system
-./1-empiece-mount-filesys-32.sh
+./2-2-empiece-mount-filesys.sh
 echo "Montado el file system"
 
 #Se entra en chroot
 #Entering chroot
-./2-0-empiece-chroot-32.sh
+./2-3-2-empiece-chroot.sh
