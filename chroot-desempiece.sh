@@ -28,3 +28,5 @@ umount ${LFS}/dev
 umount ${LFS}/proc
 umount ${LFS}/sys
 umount ${LFS}/run
+
+umount ${LFS}
