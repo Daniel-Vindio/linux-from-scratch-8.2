@@ -61,13 +61,13 @@ ls
 control_flujo
 rm -rf bin boot dev etc home lib media mnt opt proc root run sbin srv sys tmp usr var
 
-#cd $CLFS/tools
+#cd $LFS/tools
 #echo -e "\n---> Borrado de carpetas en $PWD"
 #ls
 #control_flujo
-#rm -fr bin include lib64 man share x86_64-unknown-linux-gnu etc lib  libexec sbin var
+#rm -fr bin include lib man share i686-pc-linux-gnu i686-lfs-linux-gnu etc lib  libexec sbin var
 
-
+umount $LFS
 
 
 
