@@ -20,10 +20,10 @@ cd /home
 
 
 ##Opción para cargar paquetes qi
-##./3-2-meta-qi-inst-basic-sys-sw.sh
+./3-2-meta-qi-inst-basic-sys-sw.sh
 
 ##Opción para construir con instaladores clásicos
-./3-3-meta-normal-inst-basic-sys-sw.sh
+#./3-3-meta-normal-inst-basic-sys-sw.sh
 
 
 echo -e "

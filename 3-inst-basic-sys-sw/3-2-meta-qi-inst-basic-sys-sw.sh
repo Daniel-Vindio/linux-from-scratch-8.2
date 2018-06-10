@@ -2,19 +2,23 @@
 
 echo -e "
 ############################################################\n\
-#$0--------------------------#\n\
+#$0\n\
 ############################################################\n"
+
+. 0-var-chroot-rc
+. versiones.sh
 
 cd $chrootqipkgs
 
 qi -i linux-4.16-i686+1.tlz
-qi -i man-pages-4.15-i686+0.tlz
+qi -i man-pages-4.15-i686+1.tlz
 
 
 #esto hay que probarlo
 ln -sfv /tools/lib/gcc /usr/lib
 ln -sfv ld-linux.so.2 /lib/ld-lsb.so.3
 rm -f /usr/include/limits.h
+touch /etc/ld.so.conf
 
 qi -i glibc-2.27-i686+1.tlz
 
@@ -25,6 +29,14 @@ $croothome/ilfs38_locales.sh
 qi -i tzdata-2018d-i686+1.tlz
 
 $croothome/ilfs37_adjust.sh
+
+#Añadidos 10/06/018
+
+qi -i file-5.32-i686+1.tlz
+qi -i readline-7.0-i686+1.tlz
+qi -i m4-1.4.18-i686+1.tlz
+qi -i bc-1.07.1-i686+1.tlz
+
 
 
 #qi -i m4-1.4.18-i686+1.tlz
