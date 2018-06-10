@@ -35,6 +35,18 @@ $croothome/ilfs37_adjust.sh
 qi -i file-5.32-i686+1.tlz
 qi -i readline-7.0-i686+1.tlz
 qi -i m4-1.4.18-i686+1.tlz
+
+
+#Al instalar el paquete en la host, le faltan las librerías de Flex.
+#Construir paquete flex. La build ya tiene las librerías de 32 y 64
+#por eso no dio problemas para construir bc.
+qi -i flex-2.6.4-i686+1.tlz
+ln -sv flex /usr/bin/lex
+
+#No es capaz de encontrar ncursesw en /tools/lib
+#así que le ponen esteos Symlinks temporales
+ln -sv /tools/lib/libncursesw.so.6 /usr/lib/libncursesw.so.6
+ln -sfv libncurses.so.6 /usr/lib/libncurses.so
 qi -i bc-1.07.1-i686+1.tlz
 
 
