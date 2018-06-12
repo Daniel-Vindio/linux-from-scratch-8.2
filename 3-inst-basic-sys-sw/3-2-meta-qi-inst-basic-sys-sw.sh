@@ -32,10 +32,10 @@ $croothome/ilfs37_adjust.sh
 
 #Añadidos 10/06/018
 
+qi -i zlib-1.2.11-i686+1.tlz
 qi -i file-5.32-i686+1.tlz
 qi -i readline-7.0-i686+1.tlz
 qi -i m4-1.4.18-i686+1.tlz
-
 
 #Al instalar el paquete en la host, le faltan las librerías de Flex.
 #Construir paquete flex. La build ya tiene las librerías de 32 y 64
@@ -48,19 +48,24 @@ ln -sv flex /usr/bin/lex
 ln -sv /tools/lib/libncursesw.so.6 /usr/lib/libncursesw.so.6
 ln -sfv libncurses.so.6 /usr/lib/libncurses.so
 qi -i bc-1.07.1-i686+1.tlz
+qi -i binutils-2.30-i686+1.tlz
 
+qi -i gmp-6.0.0-i686+1.tlz
+qi -i mpfr-3.1.2-i686+1.tlz
+qi -i mpc-1.0.2-i686+1.tlz
 
+#Instalacioń de GCC
+rm -f /usr/lib/gcc
+---qi -i gcc-xxxx Pendiente
 
-#qi -i m4-1.4.18-i686+1.tlz
-#qi -i gmp
-#qi -i mpfr-4.0.1-i686+1.tlz
-#qi -i mpc-1.1.0-i686+1.tlz
+ln -sv ../usr/bin/cpp /lib
+ln -sv gcc /usr/bin/cc
+---seguir añadiendo instrucciones
+
 #qi -i isl-0.18-i686+1.tlz
 #qi -i cloog-0.18.4-i686+1.tlz
-#qi -i zlib-1.2.11-i686+1.tlz
-#qi -i flex-2.6.4-i686+1.tlz
 #qi -i bison-3.0.4-i686+1.tlz
-#qi -i binutils-2.30-i686+1.tlz
+
 
 
 
