@@ -10,17 +10,16 @@ echo -e "
 
 cd $chrootqipkgs
 
-qi -i linux-4.16-i686+1.tlz
-qi -i man-pages-4.15-i686+1.tlz
-
+qi -i linux-$VER_linux-i686+1.tlz
+qi -i man-pages-$VER_man_pages-i686+1.tlz
 
 #esto hay que probarlo
 ln -sfv /tools/lib/gcc /usr/lib
 ln -sfv ld-linux.so.2 /lib/ld-lsb.so.3
-rm -f /usr/include/limits.h
+##rm -f /usr/include/limits.h
 touch /etc/ld.so.conf
 
-qi -i glibc-2.27-i686+1.tlz
+qi -i glibc-$VER_glibc-i686+1.tlz
 
 mkdir -pv /var/cache/nscd
 
@@ -30,43 +29,60 @@ qi -i tzdata-2018d-i686+1.tlz
 
 $croothome/ilfs37_adjust.sh
 
-#Añadidos 10/06/018
+qi -i zlib-$VER_zlib-i686+1.tlz
 
-qi -i zlib-1.2.11-i686+1.tlz
-qi -i file-5.32-i686+1.tlz
-qi -i readline-7.0-i686+1.tlz
-qi -i m4-1.4.18-i686+1.tlz
+mv -v /usr/lib/libz.so.* /lib
+ln -sfv ../../lib/$(readlink /usr/lib/libz.so) /usr/lib/libz.so
+#Comprobar que funcione.
+
+qi -i file-$VER_file-i686+1.tlz
+qi -i readline-$VER_readline-i686+1.tlz
+qi -i m4-$VER_m4-i686+1.tlz
 
 #Al instalar el paquete en la host, le faltan las librerías de Flex.
 #Construir paquete flex. La build ya tiene las librerías de 32 y 64
 #por eso no dio problemas para construir bc.
-qi -i flex-2.6.4-i686+1.tlz
+qi -i flex-$VER_flex-i686+1.tlz
 ln -sv flex /usr/bin/lex
 
 #No es capaz de encontrar ncursesw en /tools/lib
-#así que le ponen esteos Symlinks temporales
+#así que le ponen estos Symlinks temporales
 ln -sv /tools/lib/libncursesw.so.6 /usr/lib/libncursesw.so.6
 ln -sfv libncurses.so.6 /usr/lib/libncurses.so
-qi -i bc-1.07.1-i686+1.tlz
-qi -i binutils-2.30-i686+1.tlz
+qi -i bc-$VER_bc-i686+1.tlz
+qi -i binutils-$VER_binutils-i686+1.tlz
 
-qi -i gmp-6.0.0-i686+1.tlz
-qi -i mpfr-3.1.2-i686+1.tlz
-qi -i mpc-1.0.2-i686+1.tlz
+qi -i gmp-$VER_gmp-i686+1.tlz
+qi -i mpfr-$VER_mpfr-i686+1.tlz
+qi -i mpc-$VER_mpc-i686+1.tlz
 
-#Instalacioń de GCC
+#Instalación de GCC
 rm -f /usr/lib/gcc
----qi -i gcc-xxxx Pendiente
+
+qi -i gcc-$VER_gcc-i686+1.tlz
 
 ln -sv ../usr/bin/cpp /lib
 ln -sv gcc /usr/bin/cc
----seguir añadiendo instrucciones
+install -v -dm755 /usr/lib/bfd-plugins
+ln -sfv ../../libexec/gcc/$(gcc -dumpmachine)/$VER_gcc/liblto_plugin.so /usr/lib/bfd-plugins/
+mkdir -pv /usr/share/gdb/auto-load/usr/lib
 
-#qi -i isl-0.18-i686+1.tlz
-#qi -i cloog-0.18.4-i686+1.tlz
-#qi -i bison-3.0.4-i686+1.tlz
+#mv -v /usr/lib/*gdb.py /usr/share/gdb/auto-load/usr/lib
+#Esto no funciona
 
+#6.21. Bzip
+#Priemro se han instalado en el build machine las librería
+#de 32 bit y todo lo de 64 bit
 
+qi -i bzip2-$VER_bzip2-i686+1.tlz
+
+ln -sv ../../lib/libbz2.so.1.0 /usr/lib/libbz2.so
+rm -v /usr/bin/{bunzip2,bzcat,bzip2}
+ln -sv bzip2 /bin/bunzip2
+ln -sv bzip2 /bin/bzcat
+
+#6.22. Pkg-config-0.29.2
+qi -i pkg-config-lite-$VER_pkg-i686+1.tlz
 
 
 echo -e "
