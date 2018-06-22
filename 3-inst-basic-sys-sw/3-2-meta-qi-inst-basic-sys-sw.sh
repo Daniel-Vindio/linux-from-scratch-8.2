@@ -59,7 +59,8 @@ qi -i mpc-$VER_mpc-i686+1.tlz
 #Instalación de GCC
 rm -f /usr/lib/gcc
 
-qi -i gcc-$VER_gcc-i686+1.tlz
+#!!!!!! no funciona. Parece que se compila, pero no.
+######qi -i gcc-$VER_gcc-i686+1.tlz
 
 ln -sv ../usr/bin/cpp /lib
 ln -sv gcc /usr/bin/cc
@@ -84,6 +85,19 @@ ln -sv bzip2 /bin/bzcat
 #6.22. Pkg-config-0.29.2
 qi -i pkg-config-lite-$VER_pkg-i686+1.tlz
 
+
+#Problemas para generar el paquete qi para gcc. Lo aparco y sigo avanzando.
+#Realmente de momento no hace falta gcc en el host.
+
+
+#6.23. Ncurses-6.1
+qi -i ncurses-$VER_ncurses-i686+1.tlz
+
+#6.24. Attr-2.4.47
+#En CLFS no se instala. Pero voy a instalarlo, a que serán necesarias
+#las librerías.
+
+qi -i attr-$VER_attr-i686+1.tlz
 
 echo -e "
 #############################\n\
