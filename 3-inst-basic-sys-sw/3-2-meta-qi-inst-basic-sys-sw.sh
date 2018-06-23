@@ -114,6 +114,13 @@ qi -i shadow-$VER_shadow-i686+1.tlz
 #6.29. Psmisc-
 qi -i psmisc-$VER_psmisc-i686+1.tlz
 
+#6.30. Iana-Etc-2.30
+qi -i iana-etc-$VER_iana-i686+1.tlz
+
+#6.31. Bison-
+qi -i bison-$VER_bison-i686+1.tlz
+
+
 echo -e "
 #############################\n\
 #  terminado con exito      #\n\
