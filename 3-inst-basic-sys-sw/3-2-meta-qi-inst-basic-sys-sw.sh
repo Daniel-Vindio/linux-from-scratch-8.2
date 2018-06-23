@@ -102,6 +102,17 @@ qi -i attr-$VER_attr-i686+1.tlz
 #6.25. Acl-2.2.52
 qi -i acl-$VER_acl-i686+1.tlz
 
+#6.26. Libcap-2.25
+qi -i libcap-$VER_libcap-i686+1.tlz
+
+#6.27. Sed-4.4
+qi -i sed-$VER_sed-i686+1.tlz
+
+#6.28. Shadow-4.5
+qi -i shadow-$VER_shadow-i686+1.tlz
+
+#6.29. Psmisc-
+qi -i psmisc-$VER_psmisc-i686+1.tlz
 
 echo -e "
 #############################\n\
