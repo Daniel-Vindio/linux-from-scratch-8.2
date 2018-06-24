@@ -135,7 +135,16 @@ mv -vf /usr/bin/bash /bin
 #6.36. GDBM-
 qi -i gdbm-$VER_gdbm-i686+1.tlz
 
+#6.37. Gperf-
+qi -i gperf-$VER_gperf-i686+1.tlz
 
+#6.38. Expat-
+qi -i expat-$VER_expat-i686+1.tlz
+
+#6.39. Inetutils-
+qi -i inetutils-$VER_inetutils-i686+1.tlz
+mv -v /usr/bin/{hostname,ping,ping6,traceroute} /bin
+mv -v /usr/bin/ifconfig /sbin
 
 echo -e "
 #############################\n\
