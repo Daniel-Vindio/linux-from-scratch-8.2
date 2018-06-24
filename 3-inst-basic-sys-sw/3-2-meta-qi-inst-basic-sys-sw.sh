@@ -113,6 +113,9 @@ qi -i shadow-$VER_shadow-i686+1.tlz
 
 #6.29. Psmisc-
 qi -i psmisc-$VER_psmisc-i686+1.tlz
+mv -v /usr/bin/fuser /bin
+mv -v /usr/bin/killall /bin
+#Es mejor moverlos una vez instalado. Sino se cargan  el /bin.
 
 #6.30. Iana-Etc-2.30
 qi -i iana-etc-$VER_iana-i686+1.tlz
