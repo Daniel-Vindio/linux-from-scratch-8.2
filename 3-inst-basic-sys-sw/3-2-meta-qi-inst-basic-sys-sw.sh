@@ -123,6 +123,19 @@ qi -i iana-etc-$VER_iana-i686+1.tlz
 #6.31. Bison-
 qi -i bison-$VER_bison-i686+1.tlz
 
+#6.32 Flex-. Ya está.
+
+#6.33. Grep-
+qi -i grep-$VER_grep-i686+1.tlz
+
+#6.34. Bash
+qi -i bash-$VER_bash-i686+1.tlz
+mv -vf /usr/bin/bash /bin
+
+#6.36. GDBM-
+qi -i gdbm-$VER_gdbm-i686+1.tlz
+
+
 
 echo -e "
 #############################\n\
