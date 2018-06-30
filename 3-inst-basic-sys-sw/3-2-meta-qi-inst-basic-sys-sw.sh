@@ -146,6 +146,32 @@ qi -i inetutils-$VER_inetutils-i686+1.tlz
 mv -v /usr/bin/{hostname,ping,ping6,traceroute} /bin
 mv -v /usr/bin/ifconfig /sbin
 
+#6.41. XML::Parser
+qi -i XML-Parser-2.44-i686+1.tlz
+
+#6.42. Intltool-
+qi -i intltool-0.51.0-i686+1.tlz
+
+#6.43. Autoconf-
+qi -i autoconf-2.69-i686+1.tlz
+
+#6.44. Automake-
+qi -i automake-1.15.1-i686+1.tlz
+
+#6.45. Xz-5.2.3
+qi -i xz-$VER_xz-i686+1.tlz
+mv -v /usr/bin/{lzma,unlzma,lzcat,xz,unxz,xzcat} /bin
+
+
+#6.46. Kmod-
+qi -i kmod-$VER_kmod-i686+1.tlz
+
+for target in depmod insmod lsmod modinfo modprobe rmmod; do
+	ln -sfv ../bin/kmod /sbin/$target
+done
+ln -sfv kmod /bin/lsmod
+
+
 echo -e "
 #############################\n\
 #  terminado con exito      #\n\
