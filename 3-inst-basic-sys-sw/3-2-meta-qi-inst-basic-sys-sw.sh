@@ -162,7 +162,6 @@ qi -i automake-1.15.1-i686+1.tlz
 qi -i xz-$VER_xz-i686+1.tlz
 mv -v /usr/bin/{lzma,unlzma,lzcat,xz,unxz,xzcat} /bin
 
-
 #6.46. Kmod-
 qi -i kmod-$VER_kmod-i686+1.tlz
 
@@ -171,6 +170,17 @@ for target in depmod insmod lsmod modinfo modprobe rmmod; do
 done
 ln -sfv kmod /bin/lsmod
 
+#6.47. Gettext-
+qi -i gettext-$VER_gettext-i686+1.tlz
+
+#6.48. Libelf
+qi -i libelf-$VER_libelf-i686+1.tlz
+
+#Tiny CC
+qi -i tcc-$VER_tcc-i686+1.tlz
+
+#6.49. Libffi
+qi -i libffi-$VER_libffi-i686+1.tlz
 
 echo -e "
 #############################\n\
