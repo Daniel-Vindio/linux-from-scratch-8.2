@@ -182,6 +182,12 @@ qi -i tcc-$VER_tcc-i686+1.tlz
 #6.49. Libffi
 qi -i libffi-$VER_libffi-i686+1.tlz
 
+#6.50. OpenSSL-1.1.0g
+qi -i openssl-$VER_openssl-i686+1.tlz
+
+#6.51. Python-3
+
+
 echo -e "
 #############################\n\
 #  terminado con exito      #\n\
