@@ -56,18 +56,17 @@ qi -i gmp-$VER_gmp-i686+1.tlz
 qi -i mpfr-$VER_mpfr-i686+1.tlz
 qi -i mpc-$VER_mpc-i686+1.tlz
 
-#Instalación de GCC
-rm -f /usr/lib/gcc
-
-#!!!!!! no funciona. Parece que se compila, pero no.
-######qi -i gcc-$VER_gcc-i686+1.tlz
-
-ln -sv ../usr/bin/cpp /lib
-ln -sv gcc /usr/bin/cc
-install -v -dm755 /usr/lib/bfd-plugins
-ln -sfv ../../libexec/gcc/$(gcc -dumpmachine)/$VER_gcc/liblto_plugin.so /usr/lib/bfd-plugins/
-mkdir -pv /usr/share/gdb/auto-load/usr/lib
-
+##Instalación de GCC
+#rm -f /usr/lib/gcc
+#
+##!!!!!! no funciona. Parece que se compila, pero no.
+#######qi -i gcc-$VER_gcc-i686+1.tlz
+#ln -sv ../usr/bin/cpp /lib
+#ln -sv gcc /usr/bin/cc
+#install -v -dm755 /usr/lib/bfd-plugins
+#ln -sfv ../../libexec/gcc/$(gcc -dumpmachine)/$VER_gcc/liblto_plugin.so /usr/lib/bfd-plugins/
+#mkdir -pv /usr/share/gdb/auto-load/usr/lib
+#
 #mv -v /usr/lib/*gdb.py /usr/share/gdb/auto-load/usr/lib
 #Esto no funciona
 
@@ -186,7 +185,19 @@ qi -i libffi-$VER_libffi-i686+1.tlz
 qi -i openssl-$VER_openssl-i686+1.tlz
 
 #6.51. Python-3
+qi -i Python-$VER_Python-i686+1.tlz
 
+#6.52. Ninja-
+qi -i ninja-$VER_ninja-i686+1.tlz
+
+#6.53. Meson-0
+#No es tam facil... qi -i  VER_meson=
+
+#6.54. Procps-ng-
+qi -i procps-ng-$VER_procps-i686+1.tlz
+
+#6.73. Util-linux
+qi -i util-linux-$VER_util_linux-i686+1.tlz
 
 echo -e "
 #############################\n\
