@@ -33,7 +33,8 @@ diffutils expect file findutils gawk gcc gettext glibc gmp graft grep \
 gzip isl linux lzip m4 make man_pages mpc mpfr ncurses patch perl pkg \
 qi sed tar tcl texinfo unzip util_linux vim xz zlib flex readline bc \
 attr acl libcap shadow psmisc iana libtool gdbm gperf expat inetutils \
-xmlparser intltool autoconf automake kmod elfutils libelf tcc libffi"
+xmlparser intltool autoconf automake kmod elfutils libelf tcc libffi \
+openssl Python ninja meson procps e2fsprogs"
 
 VER_PRUEBA="prueba_ok"
 VER_binutils="2.30"
@@ -55,7 +56,8 @@ VER_isl="0.18"
 VER_pkg="0.28-1"		#pkg-config-lite. En instalador bien
 VER_bash="4.4.18"
 VER_bzip2="1.0.6"
-VER_coreutils="8.29"
+#VER_coreutils="8.29"
+VER_coreutils="8.30"
 VER_check="0.12.0"
 VER_diffutils="3.6"
 VER_findutils="4.6.0"
@@ -105,6 +107,12 @@ VER_elfutils="0.170"
 VER_libelf=${VER_elfutils}
 VER_tcc="0.9.27"
 VER_libffi="3.2.1"
+VER_openssl="1.1.0g"
+VER_Python="3.6.4"
+VER_ninja="1.8.2"
+VER_meson="0.44.0"
+VER_procps="3.3.12"
+VER_e2fsprogs="1.43.9"
 
 for i in $paquetes; do
 	export VER_$i
