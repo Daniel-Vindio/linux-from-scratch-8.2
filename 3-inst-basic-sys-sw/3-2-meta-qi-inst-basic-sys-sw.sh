@@ -199,6 +199,16 @@ qi -i procps-ng-$VER_procps-i686+1.tlz
 #6.73. Util-linux
 qi -i util-linux-$VER_util_linux-i686+1.tlz
 
+#6.56. Coreutils-
+qi -i coreutils-$VER_coreutils-i686+1.tlz
+mv -v /usr/bin/{cat,chgrp,chmod,chown,cp,date,dd,df,echo} /bin
+mv -v /usr/bin/{false,ln,ls,mkdir,mknod,mv,pwd,rm} /bin
+mv -v /usr/bin/{rmdir,stty,sync,true,uname} /bin
+mv -v /usr/bin/{head,sleep,nice} /bin
+mv -v /usr/bin/chroot /usr/sbin
+#mv -v /usr/share/man/man1/chroot.1 /usr/share/man/man8/chroot.8
+#sed -i s/\"1\"/\"8\"/1 /usr/share/man/man8/chroot.8
+
 echo -e "
 #############################\n\
 #  terminado con exito      #\n\
