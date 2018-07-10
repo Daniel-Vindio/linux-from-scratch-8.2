@@ -209,6 +209,15 @@ mv -v /usr/bin/chroot /usr/sbin
 #mv -v /usr/share/man/man1/chroot.1 /usr/share/man/man8/chroot.8
 #sed -i s/\"1\"/\"8\"/1 /usr/share/man/man8/chroot.8
 
+#6.57. Check
+qi -i check-$VER_check-i686+1.tlz
+
+#6.58. Diffutils
+qi -i diffutils-$VER_diffutils-i686+1.tlz
+
+#6.59. Gawk-
+qi -i gawk-$VER_gawk-i686+1.tlz
+
 echo -e "
 #############################\n\
 #  terminado con exito      #\n\
