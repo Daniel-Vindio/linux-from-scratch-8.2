@@ -218,6 +218,9 @@ qi -i diffutils-$VER_diffutils-i686+1.tlz
 #6.59. Gawk-
 qi -i gawk-$VER_gawk-i686+1.tlz
 
+#6.60. Findutils-
+qi -i findutils-$VER_findutils-i686+1.tlz
+
 echo -e "
 #############################\n\
 #  terminado con exito      #\n\
