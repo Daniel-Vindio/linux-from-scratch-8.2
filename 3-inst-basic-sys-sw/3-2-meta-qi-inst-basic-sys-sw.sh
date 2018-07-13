@@ -227,6 +227,20 @@ qi -i groff-$VER_groff-i686+1.tlz
 #6.62. GRUB-
 qi -i grub-$VER_grub-i686+1.tlz
 
+#6.63. Less-
+qi -i less-$VER_less-i686+1.tlz
+
+#6.64. Gzip
+qi -i gzip-$VER_gzip-i686+1.tlz
+mv -v /usr/bin/gzip /bin
+
+#6.65. IPRoute2-
+qi -i iproute2-$VER_iproute2-i686+1.tlz
+
+#6.66. Kbd-
+qi -i kbd-$VER_kbd-i686+1.tlz
+
+
 echo -e "
 #############################\n\
 #  terminado con exito      #\n\
