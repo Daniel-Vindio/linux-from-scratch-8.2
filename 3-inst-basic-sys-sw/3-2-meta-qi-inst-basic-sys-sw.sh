@@ -260,6 +260,8 @@ qi -i sysklogd-$VER_sysklogd-i686+1.tlz
 #PEro no encuentra las lib de 32 bit. Hay que explicárselo.
 #qi -i sysvinit-$VER_sysvinit-i686+1.tlz
 
+#6.72. Eudev-
+qi -i eudev-$VER_eudev-i686+1.tlz
 
 echo -e "
 #############################\n\
