@@ -240,6 +240,26 @@ qi -i iproute2-$VER_iproute2-i686+1.tlz
 #6.66. Kbd-
 qi -i kbd-$VER_kbd-i686+1.tlz
 
+#6.67. Libpipeline-
+qi -i libpipeline-$VER_libpipeline-i686+1.tlz
+
+#6.68. Make-
+qi -i make-$VER_make-i686+1.tlz
+
+#6.69. Patch-
+qi -i patch-$VER_patch-i686+1.tlz
+
+#6.70. Sysklogd-
+qi -i sysklogd-$VER_sysklogd-i686+1.tlz
+
+#6.71. Sysvinit-
+#Pendiente de generar el paqete.
+#Es un makefile muy sencillo, pero que no está preparado ara la cmpilación
+#cruzada. Hay que estudiar cómo pasarle los parámetros desde 64 para 32 bit.
+#Por ejemplo, en make hay que poner make CFLAGS=-m32.
+#PEro no encuentra las lib de 32 bit. Hay que explicárselo.
+#qi -i sysvinit-$VER_sysvinit-i686+1.tlz
+
 
 echo -e "
 #############################\n\
