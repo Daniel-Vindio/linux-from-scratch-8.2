@@ -253,12 +253,7 @@ qi -i patch-$VER_patch-i686+1.tlz
 qi -i sysklogd-$VER_sysklogd-i686+1.tlz
 
 #6.71. Sysvinit-
-#Pendiente de generar el paqete.
-#Es un makefile muy sencillo, pero que no está preparado ara la cmpilación
-#cruzada. Hay que estudiar cómo pasarle los parámetros desde 64 para 32 bit.
-#Por ejemplo, en make hay que poner make CFLAGS=-m32.
-#PEro no encuentra las lib de 32 bit. Hay que explicárselo.
-#qi -i sysvinit-$VER_sysvinit-i686+1.tlz
+qi -i sysvinit-$VER_sysvinit-i686+1.tlz
 
 #6.72. Eudev-
 qi -i eudev-$VER_eudev-i686+1.tlz
