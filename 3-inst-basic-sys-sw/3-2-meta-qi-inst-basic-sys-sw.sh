@@ -267,6 +267,34 @@ qi -i tar-$VER_tar-i686+1.tlz
 #6.76. Texinfo-
 qi -i texinfo-$VER_texinfo-i686+1.tlz
 
+#6.77. Vim-
+qi -i vim-$VER_vim-i686+1.tlz
+cat > /etc/vimrc << "EOF"
+" Begin /etc/vimrc
+" Ensure defaults are set before customizing settings, not after
+source $VIMRUNTIME/defaults.vim
+let skip_defaults_vim=1
+set nocompatible
+set backspace=2
+set mouse=
+syntax on
+
+if (&term == "xterm") || (&term == "putty")
+set background=dark
+endif
+
+set spelllang=es,en
+map <f12> :set spell!<cr>
+"this is to activate/deactivate the spelling
+
+set tw=75 et nowritebackup
+
+" End /etc/vimrc
+EOF
+
+
+
+
 echo -e "
 #############################\n\
 #  terminado con exito      #\n\
