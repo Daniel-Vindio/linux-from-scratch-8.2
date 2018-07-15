@@ -258,6 +258,15 @@ qi -i sysvinit-$VER_sysvinit-i686+1.tlz
 #6.72. Eudev-
 qi -i eudev-$VER_eudev-i686+1.tlz
 
+#6.74. Man-DB-
+qi -i man-db-$VER_man_db-i686+1.tlz
+
+#6.75. Tar-1
+qi -i tar-$VER_tar-i686+1.tlz
+
+#6.76. Texinfo-
+qi -i texinfo-$VER_texinfo-i686+1.tlz
+
 echo -e "
 #############################\n\
 #  terminado con exito      #\n\
