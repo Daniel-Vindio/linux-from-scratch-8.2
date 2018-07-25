@@ -37,12 +37,13 @@ if [ $(id -u) -ne 0 ]
 fi
 
 #---------------------------------------
+qi -dp kmod-$VER_kmod-i686+1.tlz
 qi -i kmod-$VER_kmod-i686+1.tlz
 
 for target in depmod insmod lsmod modinfo modprobe rmmod; do
-	ln -sfv ../bin/kmod /sbin/$target
+	ln -sfv /bin/kmod /sbin/$target
 done
-ln -sfv kmod /bin/lsmod
+ln -sfv /bin/kmod /bin/lsmod
 
 
 #Registro de tiempos de ejecución
