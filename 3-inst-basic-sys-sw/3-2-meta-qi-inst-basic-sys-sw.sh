@@ -257,6 +257,7 @@ qi -i sysvinit-$VER_sysvinit-i686+1.tlz
 
 #6.72. Eudev-
 qi -i eudev-$VER_eudev-i686+1.tlz
+udevadm hwdb --update
 
 #6.74. Man-DB-
 qi -i man-db-$VER_man_db-i686+1.tlz
@@ -292,6 +293,14 @@ set tw=75 et nowritebackup
 " End /etc/vimrc
 EOF
 
+#8.3. Linux-
+qi -i linux-$VER_linux-i686+1.tlz
+
+### RUNIT
+qi -i runit-$VER_runit-i686+1.tlz
+
+### Mosepad
+qi -i gpm-$VER_gpm-i686+1.tlz
 
 
 
